@@ -11,6 +11,7 @@ import java.util.function.Function;
 @Service
 @Validated
 public class OwnerListUseCase implements Function<String, Flux<QuestionDTO>> {
+
     private final QuestionRepository questionRepository;
     private final MapperUtils mapperUtils;
 
@@ -18,7 +19,6 @@ public class OwnerListUseCase implements Function<String, Flux<QuestionDTO>> {
         this.questionRepository = questionRepository;
         this.mapperUtils = mapperUtils;
     }
-
 
     @Override
     public Flux<QuestionDTO> apply(String userId) {

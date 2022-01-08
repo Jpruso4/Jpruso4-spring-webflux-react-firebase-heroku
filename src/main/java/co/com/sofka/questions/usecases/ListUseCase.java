@@ -11,6 +11,7 @@ import java.util.function.Supplier;
 @Service
 @Validated
 public class ListUseCase implements Supplier<Flux<QuestionDTO>> {
+
     private final QuestionRepository questionRepository;
     private final MapperUtils mapperUtils;
 

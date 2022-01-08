@@ -12,6 +12,7 @@ import java.util.Objects;
 @Service
 @Validated
 public class AddAnswerUseCase implements SaveAnswer {
+
     private final AnswerRepository answerRepository;
     private final MapperUtils mapperUtils;
     private final GetUseCase getUseCase;

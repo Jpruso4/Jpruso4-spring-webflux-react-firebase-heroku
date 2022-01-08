@@ -12,6 +12,7 @@ import java.util.function.Function;
 @Service
 @Validated
 public class DeleteUseCase implements Function<String, Mono<Void>> {
+
     private final QuestionRepository questionRepository;
     private final AnswerRepository answerRepository;
 
@@ -19,7 +20,6 @@ public class DeleteUseCase implements Function<String, Mono<Void>> {
         this.questionRepository = questionRepository;
         this.answerRepository = answerRepository;
     }
-
 
     @Override
     public Mono<Void> apply(String id) {
