@@ -17,16 +17,9 @@ import QuestionsPage from './pages/QuestionsPage'
 import QuestionFormPage from './pages/QuestionFormPage'
 import AnswerFormPage from './pages/AnswerFormPage'
 import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
+import LoginFormPage from './pages/LoginFormPage';
+import RegisterFormPage from './pages/RegisterFormPage';
 import { useAuthState } from "react-firebase-hooks/auth";
-
-firebase.initializeApp({
-  apiKey: "AIzaSyCTySyvuIDPg7RWF6ceuuwC2t3BEiAK38o",
-  authDomain: "question-app-demo.firebaseapp.com",
-  projectId: "question-app-demo",
-  storageBucket: "question-app-demo.appspot.com",
-  messagingSenderId: "1038673531562",
-  appId: "1:1038673531562:web:da90421f639a3115dcf6d3"
-});
 
 const auth = firebase.auth();
 
@@ -61,6 +54,8 @@ const App = ({ dispatch }) => {
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/answer/:id" component={AnswerFormPage} />
+            <Route exact path="/login" component={LoginFormPage}/>
+            <Route exact path="/register" component={RegisterFormPage}/>
             <Redirect to="/" />
           </Switch>
         </>
