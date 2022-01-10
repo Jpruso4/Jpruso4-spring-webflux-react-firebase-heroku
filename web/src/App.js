@@ -1,25 +1,32 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom'
+} from 'react-router-dom';
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import { login, logout } from './actions/authActions';
 
-import { PublicNavbar, PrivateNavbar } from './components/Navbar'
-import HomePage from './pages/HomePage'
-import SingleQuestionPage from './pages/SingleQuestionPage'
-import QuestionsPage from './pages/QuestionsPage'
-import QuestionFormPage from './pages/QuestionFormPage'
-import AnswerFormPage from './pages/AnswerFormPage'
-import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
-import LoginFormPage from './pages/LoginFormPage';
-import RegisterFormPage from './pages/RegisterFormPage';
+import { PublicNavbar, PrivateNavbar } from './components/Navbar';
+import HomePage from './pages/HomePage';
+import SingleQuestionPage from './pages/SingleQuestionPage';
+import QuestionsPage from './pages/QuestionsPage';
+import QuestionFormPage from './pages/QuestionFormPage';
+import AnswerFormPage from './pages/AnswerFormPage';
+import OwnerQuestionsPage from './pages/OwnerQuestionsPage';
 import { useAuthState } from "react-firebase-hooks/auth";
+
+firebase.initializeApp({
+  apiKey: "AIzaSyA2fbTyMWrzaFqeXHDJQLg8mHwS2oltWLQ",
+  authDomain: "questionandanswerreact.firebaseapp.com",
+  projectId: "questionandanswerreact",
+  storageBucket: "questionandanswerreact.appspot.com",
+  messagingSenderId: "804558679794",
+  appId: "1:804558679794:web:984611cdb4c44b3ff52a6b"
+});
 
 const auth = firebase.auth();
 
@@ -54,8 +61,6 @@ const App = ({ dispatch }) => {
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/answer/:id" component={AnswerFormPage} />
-            <Route exact path="/login" component={LoginFormPage}/>
-            <Route exact path="/register" component={RegisterFormPage}/>
             <Redirect to="/" />
           </Switch>
         </>
@@ -90,4 +95,4 @@ function SignOut({ dispatch }) {
 }
 
 
-export default App
+export default App;

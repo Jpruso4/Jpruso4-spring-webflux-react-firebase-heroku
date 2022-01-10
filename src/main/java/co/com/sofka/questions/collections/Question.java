@@ -12,6 +12,7 @@ public class Question {
     @Id
     private String id;
     private String userId;
+    private String userEmail;
     private String question;
     private String type;
     private String category;
