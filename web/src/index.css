@@ -104,4 +104,17 @@ body {
   .right {
     float: right;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 1;
+    background-color: black;
+    color: red;
+    text-align: center;
+    height: 100px;
+  }
   
+

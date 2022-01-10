@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export const PublicNavbar = () => (
   <nav>
     <section>
+      <Link><img src="pregunta.png" alt='Icono de la app' height="30px"/></Link>
       <Link to="/">Home</Link>
       <Link to="/questions">Questions</Link>
       <Link to="/login">Login</Link>
@@ -15,6 +16,7 @@ export const PublicNavbar = () => (
 export const PrivateNavbar = () => (
   <nav>
     <section>
+      <Link><img src="pregunta.png" alt='Icono de la app' height="30px"/></Link>
       <Link to="/">Home</Link>
       <Link to="/questions">Questions</Link>
       <Link to="/new">New</Link>
