@@ -21,14 +21,14 @@ const OwnerQuestionsPage = ({ dispatch, loading, questions, hasErrors, redirect,
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#07711D',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#b71c1c',
+            cancelButtonColor: '#616161',
             confirmButtonText: 'Yes Delete'
           }).then((result) => {
             if(result.isConfirmed) {
             dispatch(deleteQuestion(id))
                 swal.fire(
-                'Deleted!',
+                'Deleted!', 
                 'Your question has been deleted.',
                 'success'
               )
