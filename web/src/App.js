@@ -17,17 +17,10 @@ import QuestionsPage from './pages/QuestionsPage';
 import QuestionFormPage from './pages/QuestionFormPage';
 import AnswerFormPage from './pages/AnswerFormPage';
 import OwnerQuestionsPage from './pages/OwnerQuestionsPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import { useAuthState } from "react-firebase-hooks/auth";
 import Footer from './components/Footer';
-
-firebase.initializeApp({
-  apiKey: "AIzaSyA2fbTyMWrzaFqeXHDJQLg8mHwS2oltWLQ",
-  authDomain: "questionandanswerreact.firebaseapp.com",
-  projectId: "questionandanswerreact",
-  storageBucket: "questionandanswerreact.appspot.com",
-  messagingSenderId: "804558679794",
-  appId: "1:804558679794:web:984611cdb4c44b3ff52a6b"
-});
 
 const auth = firebase.auth();
 
@@ -63,6 +56,8 @@ const App = ({ dispatch }) => {
             <Route exact path="/questions" component={QuestionsPage} />
             <Route exact path="/question/:id" component={SingleQuestionPage} />
             <Route exact path="/answer/:id" component={AnswerFormPage} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/register" component={RegisterPage} />
             <Redirect to="/" />
           </Switch>
         </>

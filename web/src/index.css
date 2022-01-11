@@ -106,7 +106,7 @@ body {
   }
 
   .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -117,4 +117,13 @@ body {
     height: 100px;
   }
   
+  .input{
+    margin-right: 450px;
+    margin-left: 450px;
+  }
+
+  .buttons{
+    background-color: #E53935;
+    border-radius: 5px;
+  }
 
