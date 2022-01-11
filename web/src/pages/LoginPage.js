@@ -48,7 +48,7 @@ export default class Login extends Component {
                             <input type="password" class="form-control" name="password" onChange={this.handleChange} value={this.state.password} />
                             <button className="buttons"><strong>Get in</strong></button>
                             {" "}
-                            <button className="buttons" onClick={this.googleSignIn}>Login with Google</button>
+                            <button className="buttons" onClick={this.googleSignIn}><strong>Login with Google</strong></button>
                         </div>
                     </div>
                 </form>
